@@ -102,20 +102,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-source/CMakeFiles/aufgaben.dir/rule:
-	cd "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build" && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/aufgaben.dir/rule
-.PHONY : source/CMakeFiles/aufgaben.dir/rule
-
-# Convenience name for target.
-aufgaben: source/CMakeFiles/aufgaben.dir/rule
-.PHONY : aufgaben
-
-# fast build rule for target.
-aufgaben/fast:
-	cd "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build" && $(MAKE) -f source/CMakeFiles/aufgaben.dir/build.make source/CMakeFiles/aufgaben.dir/build
-.PHONY : aufgaben/fast
-
-# Convenience name for target.
 source/CMakeFiles/tests.dir/rule:
 	cd "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build" && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/tests.dir/rule
 .PHONY : source/CMakeFiles/tests.dir/rule
@@ -129,53 +115,29 @@ tests/fast:
 	cd "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/build
 .PHONY : tests/fast
 
-aufgabe10.o: aufgabe10.cpp.o
-.PHONY : aufgabe10.o
+testlist.o: testlist.cpp.o
+.PHONY : testlist.o
 
 # target to build an object file
-aufgabe10.cpp.o:
-	cd "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/aufgabe10.cpp.o
-.PHONY : aufgabe10.cpp.o
+testlist.cpp.o:
+	cd "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/testlist.cpp.o
+.PHONY : testlist.cpp.o
 
-aufgabe10.i: aufgabe10.cpp.i
-.PHONY : aufgabe10.i
-
-# target to preprocess a source file
-aufgabe10.cpp.i:
-	cd "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/aufgabe10.cpp.i
-.PHONY : aufgabe10.cpp.i
-
-aufgabe10.s: aufgabe10.cpp.s
-.PHONY : aufgabe10.s
-
-# target to generate assembly for a file
-aufgabe10.cpp.s:
-	cd "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/aufgabe10.cpp.s
-.PHONY : aufgabe10.cpp.s
-
-aufgabe2bis4.o: aufgabe2bis4.cpp.o
-.PHONY : aufgabe2bis4.o
-
-# target to build an object file
-aufgabe2bis4.cpp.o:
-	cd "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build" && $(MAKE) -f source/CMakeFiles/aufgaben.dir/build.make source/CMakeFiles/aufgaben.dir/aufgabe2bis4.cpp.o
-.PHONY : aufgabe2bis4.cpp.o
-
-aufgabe2bis4.i: aufgabe2bis4.cpp.i
-.PHONY : aufgabe2bis4.i
+testlist.i: testlist.cpp.i
+.PHONY : testlist.i
 
 # target to preprocess a source file
-aufgabe2bis4.cpp.i:
-	cd "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build" && $(MAKE) -f source/CMakeFiles/aufgaben.dir/build.make source/CMakeFiles/aufgaben.dir/aufgabe2bis4.cpp.i
-.PHONY : aufgabe2bis4.cpp.i
+testlist.cpp.i:
+	cd "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/testlist.cpp.i
+.PHONY : testlist.cpp.i
 
-aufgabe2bis4.s: aufgabe2bis4.cpp.s
-.PHONY : aufgabe2bis4.s
+testlist.s: testlist.cpp.s
+.PHONY : testlist.s
 
 # target to generate assembly for a file
-aufgabe2bis4.cpp.s:
-	cd "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build" && $(MAKE) -f source/CMakeFiles/aufgaben.dir/build.make source/CMakeFiles/aufgaben.dir/aufgabe2bis4.cpp.s
-.PHONY : aufgabe2bis4.cpp.s
+testlist.cpp.s:
+	cd "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build" && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/testlist.cpp.s
+.PHONY : testlist.cpp.s
 
 # Help Target
 help:
@@ -183,16 +145,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... aufgaben"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... tests"
-	@echo "... aufgabe10.o"
-	@echo "... aufgabe10.i"
-	@echo "... aufgabe10.s"
-	@echo "... aufgabe2bis4.o"
-	@echo "... aufgabe2bis4.i"
-	@echo "... aufgabe2bis4.s"
+	@echo "... testlist.o"
+	@echo "... testlist.i"
+	@echo "... testlist.s"
 .PHONY : help
 
 

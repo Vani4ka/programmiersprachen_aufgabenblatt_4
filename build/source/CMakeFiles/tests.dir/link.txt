@@ -1,1 +1,1 @@
-/usr/bin/c++   -std=c++11 -Wall    CMakeFiles/tests.dir/aufgabe10.cpp.o  -o ../tests -rdynamic 
+/usr/bin/c++   -std=c++11 -Wall    CMakeFiles/tests.dir/testlist.cpp.o  -o ../tests -rdynamic 

@@ -115,19 +115,6 @@ glfw/fast:
 .PHONY : glfw/fast
 
 #=============================================================================
-# Target rules for targets named aufgaben
-
-# Build rule for target.
-aufgaben: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 aufgaben
-.PHONY : aufgaben
-
-# fast build rule for target.
-aufgaben/fast:
-	$(MAKE) -f source/CMakeFiles/aufgaben.dir/build.make source/CMakeFiles/aufgaben.dir/build
-.PHONY : aufgaben/fast
-
-#=============================================================================
 # Target rules for targets named tests
 
 # Build rule for target.
@@ -149,7 +136,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... glfw"
-	@echo "... aufgaben"
 	@echo "... tests"
 .PHONY : help
 

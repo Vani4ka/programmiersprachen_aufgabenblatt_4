@@ -226,13 +226,13 @@ vector
 assert.h
 -
 
-/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/source/aufgabe10.cpp
+/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/source/list.hpp
+cstddef
+-
+
+/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/source/testlist.cpp
 catch.hpp
 /home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/source/catch.hpp
-cmath
--
-algorithm
--
-vector
--
+list.hpp
+/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/source/list.hpp
 

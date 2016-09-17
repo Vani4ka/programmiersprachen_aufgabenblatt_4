@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/source/aufgabe10.cpp" "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/source/CMakeFiles/tests.dir/aufgabe10.cpp.o"
+  "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/source/testlist.cpp" "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/source/CMakeFiles/tests.dir/testlist.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

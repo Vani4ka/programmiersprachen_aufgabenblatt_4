@@ -52,37 +52,37 @@ include source/CMakeFiles/tests.dir/progress.make
 # Include the compile flags for this target's objects.
 include source/CMakeFiles/tests.dir/flags.make
 
-source/CMakeFiles/tests.dir/aufgabe10.cpp.o: source/CMakeFiles/tests.dir/flags.make
-source/CMakeFiles/tests.dir/aufgabe10.cpp.o: ../source/aufgabe10.cpp
+source/CMakeFiles/tests.dir/testlist.cpp.o: source/CMakeFiles/tests.dir/flags.make
+source/CMakeFiles/tests.dir/testlist.cpp.o: ../source/testlist.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/CMakeFiles" $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object source/CMakeFiles/tests.dir/aufgabe10.cpp.o"
-	cd "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/source" && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/aufgabe10.cpp.o -c "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/source/aufgabe10.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object source/CMakeFiles/tests.dir/testlist.cpp.o"
+	cd "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/source" && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/testlist.cpp.o -c "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/source/testlist.cpp"
 
-source/CMakeFiles/tests.dir/aufgabe10.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/aufgabe10.cpp.i"
-	cd "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/source" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/source/aufgabe10.cpp" > CMakeFiles/tests.dir/aufgabe10.cpp.i
+source/CMakeFiles/tests.dir/testlist.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/testlist.cpp.i"
+	cd "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/source" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/source/testlist.cpp" > CMakeFiles/tests.dir/testlist.cpp.i
 
-source/CMakeFiles/tests.dir/aufgabe10.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/aufgabe10.cpp.s"
-	cd "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/source" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/source/aufgabe10.cpp" -o CMakeFiles/tests.dir/aufgabe10.cpp.s
+source/CMakeFiles/tests.dir/testlist.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/testlist.cpp.s"
+	cd "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/source" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/source/testlist.cpp" -o CMakeFiles/tests.dir/testlist.cpp.s
 
-source/CMakeFiles/tests.dir/aufgabe10.cpp.o.requires:
-.PHONY : source/CMakeFiles/tests.dir/aufgabe10.cpp.o.requires
+source/CMakeFiles/tests.dir/testlist.cpp.o.requires:
+.PHONY : source/CMakeFiles/tests.dir/testlist.cpp.o.requires
 
-source/CMakeFiles/tests.dir/aufgabe10.cpp.o.provides: source/CMakeFiles/tests.dir/aufgabe10.cpp.o.requires
-	$(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/aufgabe10.cpp.o.provides.build
-.PHONY : source/CMakeFiles/tests.dir/aufgabe10.cpp.o.provides
+source/CMakeFiles/tests.dir/testlist.cpp.o.provides: source/CMakeFiles/tests.dir/testlist.cpp.o.requires
+	$(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/testlist.cpp.o.provides.build
+.PHONY : source/CMakeFiles/tests.dir/testlist.cpp.o.provides
 
-source/CMakeFiles/tests.dir/aufgabe10.cpp.o.provides.build: source/CMakeFiles/tests.dir/aufgabe10.cpp.o
+source/CMakeFiles/tests.dir/testlist.cpp.o.provides.build: source/CMakeFiles/tests.dir/testlist.cpp.o
 
 # Object files for target tests
 tests_OBJECTS = \
-"CMakeFiles/tests.dir/aufgabe10.cpp.o"
+"CMakeFiles/tests.dir/testlist.cpp.o"
 
 # External object files for target tests
 tests_EXTERNAL_OBJECTS =
 
-tests: source/CMakeFiles/tests.dir/aufgabe10.cpp.o
+tests: source/CMakeFiles/tests.dir/testlist.cpp.o
 tests: source/CMakeFiles/tests.dir/build.make
 tests: source/CMakeFiles/tests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../tests"
@@ -92,7 +92,7 @@ tests: source/CMakeFiles/tests.dir/link.txt
 source/CMakeFiles/tests.dir/build: tests
 .PHONY : source/CMakeFiles/tests.dir/build
 
-source/CMakeFiles/tests.dir/requires: source/CMakeFiles/tests.dir/aufgabe10.cpp.o.requires
+source/CMakeFiles/tests.dir/requires: source/CMakeFiles/tests.dir/testlist.cpp.o.requires
 .PHONY : source/CMakeFiles/tests.dir/requires
 
 source/CMakeFiles/tests.dir/clean:

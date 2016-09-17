@@ -62,6 +62,5 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 SET(CMAKE_DEPEND_INFO_FILES
   "external/glfw-3.0.3/src/CMakeFiles/glfw.dir/DependInfo.cmake"
-  "source/CMakeFiles/aufgaben.dir/DependInfo.cmake"
   "source/CMakeFiles/tests.dir/DependInfo.cmake"
   )
