@@ -1,0 +1,73 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2668947843/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2668947843.dir/build.make CMakeFiles/cmTryCompileExec2668947843.dir/build
+make[1]: Entering directory `/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
+Building C object CMakeFiles/cmTryCompileExec2668947843.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2668947843.dir/CheckSymbolExists.c.o   -c "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c"
+Linking C executable cmTryCompileExec2668947843
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2668947843.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2668947843.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2668947843 -rdynamic 
+CMakeFiles/cmTryCompileExec2668947843.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec2668947843] Error 1
+make: *** [cmTryCompileExec2668947843/fast] Error 2
+
+File /home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3318892646/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3318892646.dir/build.make CMakeFiles/cmTryCompileExec3318892646.dir/build
+make[1]: Entering directory `/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
+Building C object CMakeFiles/cmTryCompileExec3318892646.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec3318892646.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3318892646
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3318892646.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec3318892646.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3318892646 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec3318892646] Error 1
+make: *** [cmTryCompileExec3318892646/fast] Error 2
+
+
+Determining if the function glXGetProcAddressEXT exists failed with the following output:
+Change Dir: /home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec979499727/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec979499727.dir/build.make CMakeFiles/cmTryCompileExec979499727.dir/build
+make[1]: Entering directory `/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report "/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
+Building C object CMakeFiles/cmTryCompileExec979499727.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT   -o CMakeFiles/cmTryCompileExec979499727.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec979499727
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec979499727.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT    CMakeFiles/cmTryCompileExec979499727.dir/CheckFunctionExists.c.o  -o cmTryCompileExec979499727 -rdynamic -lGL 
+CMakeFiles/cmTryCompileExec979499727.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `glXGetProcAddressEXT'
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec979499727] Error 1
+make: *** [cmTryCompileExec979499727/fast] Error 2
+
+

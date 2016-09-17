@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/source/aufgabe2bis4.cpp
+iostream
+-
+cstdlib
+-
+list
+-
+vector
+-
+set
+-
+map
+-
+

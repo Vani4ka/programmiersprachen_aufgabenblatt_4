@@ -1,0 +1,3 @@
+/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/source/CMakeFiles/aufgaben.dir
+/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/external/glfw-3.0.3/src/CMakeFiles/glfw.dir
+/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/build/source/CMakeFiles/tests.dir
