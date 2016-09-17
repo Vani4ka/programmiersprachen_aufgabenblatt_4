@@ -71,6 +71,60 @@ public:
 		return m_size;
 	}
 
+	T front() const {
+		return m_first->m_value;
+	}
+
+	T back() const {
+		return m_last->m_value;
+	}
+
+	void push_front(T const& t) {
+		ListNode<T>* n = new ListNode<T>{t, nullptr, m_first};
+		
+		m_size+=1;
+		m_first = n;
+		if (size()==1)
+		{
+			m_last = n;
+		}
+		else {
+			m_first->m_next->m_prev = n;
+		}
+
+	}
+	void push_back(T const& t) {
+		ListNode<T>* n = new ListNode<T>{t, m_last, nullptr};
+
+		m_size+=1;
+		m_last = n;
+		if (size()==1)
+		{
+			m_first = n;
+		}
+		else {
+			m_last->m_prev->m_next = n;
+		}
+	}
+
+	void pop_front() {
+		auto temp = m_first;
+		m_first->m_next->m_prev = nullptr;
+		m_first = m_first->m_next;
+		delete temp;
+		temp = nullptr;
+		m_size-=1;
+	}
+
+	void pop_back() {
+		auto temp = m_last;
+		m_last->m_prev->m_next = nullptr;
+		m_last = m_last->m_prev;
+		delete temp;
+		temp = nullptr;
+		m_size-=1;
+	}
+
 private:
 	//Warum sind sie initialisiert? 
 	std::size_t m_size = 0;
