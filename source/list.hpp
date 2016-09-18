@@ -208,11 +208,11 @@ public:
 		}
 	}
 
-	ListIterator<T> begin() {
+	ListIterator<T> begin() const {
 		return ListIterator<T> {m_first};
 	}
 
-	ListIterator<T> end() {
+	ListIterator<T> end() const {
 		//return ListIterator<T> {nullptr};
 		ListIterator<T> e{m_last};
 		return e.next();
@@ -224,5 +224,37 @@ private:
 	ListNode<T>* m_first = nullptr;
 	ListNode<T>* m_last = nullptr;
 };
+
+template <typename T>
+bool operator==(List<T> const& xs, List<T> const& ys) {
+	if(xs.size()==ys.size()) {
+		auto i=xs.begin();
+		for(auto j=ys.begin(); j!=ys.end();++j) {
+			if (*j!=*i)
+			{
+				return false; 
+			}
+			++i;
+		}
+		return true;
+	}
+	else return false;
+}
+
+template <typename T>
+bool operator!=(List<T> const& xs, List<T> const& ys) {
+	if(xs.size()==ys.size()) {
+		auto i=xs.begin();
+		for(auto j=ys.begin(); j!=ys.end();++j) {
+			if (*j!=*i)
+			{
+				return true; 
+			}
+			++i;
+		}
+		return false;
+	}
+	else return true;
+}
 
 #endif

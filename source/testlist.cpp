@@ -88,6 +88,31 @@ TEST_CASE( " test operator ++ " , " [ iterators ] " )
 	}
 }
 
+TEST_CASE("List != und ==", "[iterators]")
+{
+	List<int> l1;
+	List<int> l2;
+	List<int> l3;
+
+	l1.push_back(1);
+	l1.push_back(2);
+	l1.push_back(3);
+	l1.push_back(4);
+
+	l2.push_back(1);
+	l2.push_back(2);
+	l2.push_back(3);
+	l2.push_back(4);
+
+	l3.push_back(1);
+	l3.push_back(3);
+	l3.push_back(5);
+	l3.push_back(11);
+
+	REQUIRE(l1==l2);
+	REQUIRE(l1!=l3);
+}
+
 int main(int argc, char* argv[])
 {
 	return Catch::Session().run(argc, argv);
