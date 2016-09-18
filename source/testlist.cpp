@@ -3,6 +3,8 @@
 
 #include "list.hpp"
 
+#include <list>
+
 
 TEST_CASE ("describe_list", "[aufgabe1]")
 {
@@ -53,6 +55,37 @@ TEST_CASE("should be empty after clearing ", "[modifiers]")
 	list.push_front(4);
 	list.clear();
 	REQUIRE(list.empty());
+}
+
+TEST_CASE( " should be an empty range after default construction " , " [ iterators ] " )
+{
+	List<int> list;
+	auto b= list.begin();
+	auto e= list.end();
+	REQUIRE( b==e );
+}
+
+TEST_CASE( " provide acces to the first element with begin " , " [ iterators ] " )
+{
+	List<int> list;
+	list.push_front(42);
+
+	REQUIRE(42== *list.begin());
+}
+
+TEST_CASE( " test operator ++ " , " [ iterators ] " )
+{
+	
+	List<int> list;
+	list.push_front(4);
+	list.push_front(3);
+	list.push_front(2);
+	list.push_front(1);
+	int j=1;
+	for(auto i=list.begin(); i!=list.end(); ++i) {
+		REQUIRE(*i== j);
+		j++;
+	}
 }
 
 int main(int argc, char* argv[])

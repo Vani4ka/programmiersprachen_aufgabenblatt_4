@@ -29,10 +29,67 @@ struct ListNode {
 template <typename T>
 struct ListIterator
 {
-	friend class List<T>;
-public:
+	typedef ListIterator<T> Self;
 
-	//to implement
+	typedef T value_type;
+	typedef T* pointer;
+	typedef T& reference;
+	typedef ptrdiff_t difference_type;
+	typedef std::forward_iterator_tag iterator_category;
+
+	friend class List<T>;
+
+	ListIterator():
+	m_node{nullptr}
+	{}
+
+	ListIterator(ListNode<T>* n):
+	m_node{n}
+	{}
+
+	reference operator*() const {
+		return m_node->m_value;
+	}
+
+	// pointer operator->() const {
+	// 	return 
+	// }
+
+
+	Self& operator++() {
+		m_node = m_node->m_next;
+		return *this;
+	}
+
+	// ?
+	Self operator++(int n) {
+		for (int i = 0; i < n; ++i)
+		{
+			if (m_node->m_next==nullptr)
+			{
+				break;
+			}
+			m_node = m_node->m_next;
+		}
+		return this;
+	}
+
+	bool operator==(const Self& x) const {
+		return m_node==x.m_node;
+	}
+
+	bool operator!=(const Self& x) const {
+		return m_node!=x.m_node;
+	}
+
+	Self next() const {
+		if(m_node) {
+			return ListIterator(m_node->m_next);
+		}
+		else {
+			return ListIterator(nullptr);
+		}
+	}
 
 private:
 	ListNode<T>* m_node = nullptr;
@@ -52,12 +109,10 @@ public:
 	friend class ListIterator<T>;
 	//friend class ListConstIterator<T>;
 
-	//to implement
-
 	List():
-	m_size(0),
-	m_first(nullptr),
-	m_last(nullptr)
+	m_size{0},
+	m_first{nullptr},
+	m_last{nullptr}
 	{}
 
 	~List() {
@@ -151,6 +206,16 @@ public:
 		{
 			pop_back();
 		}
+	}
+
+	ListIterator<T> begin() {
+		return ListIterator<T> {m_first};
+	}
+
+	ListIterator<T> end() {
+		//return ListIterator<T> {nullptr};
+		ListIterator<T> e{m_last};
+		return e.next();
 	}
 
 private:
