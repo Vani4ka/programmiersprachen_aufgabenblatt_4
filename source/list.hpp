@@ -119,6 +119,13 @@ public:
 		clear();
 	}
 
+	// copy-c-tor
+	List(List<T> const& l) {
+		for(auto it=l.begin(); it!=l.end(); ++it) {
+			push_back(*it);
+		}
+	}
+
 	bool empty() const {
 		if (size()==0)
 		{
