@@ -2,6 +2,7 @@
 #define BUW_LIST_HPP
 
 #include <cstddef>
+#include <iostream>
 
 template <typename T>
 struct List;
@@ -59,6 +60,10 @@ public:
 	m_last(nullptr)
 	{}
 
+	~List() {
+		clear();
+	}
+
 	bool empty() const {
 		if (size()==0)
 		{
@@ -108,21 +113,44 @@ public:
 	}
 
 	void pop_front() {
-		auto temp = m_first;
-		m_first->m_next->m_prev = nullptr;
-		m_first = m_first->m_next;
-		delete temp;
-		temp = nullptr;
-		m_size-=1;
+		if(!empty()) {
+			auto temp = m_first;
+			if(size()>1) {
+				m_first->m_next->m_prev = nullptr;
+				m_first = m_first->m_next;
+			}
+			else {
+				m_first->m_next=nullptr;
+			}
+			delete temp;
+			temp = nullptr;
+			m_size-=1;
+		}
+		else std::cout<<"List is empty!"<<std::endl;
 	}
 
 	void pop_back() {
-		auto temp = m_last;
-		m_last->m_prev->m_next = nullptr;
-		m_last = m_last->m_prev;
-		delete temp;
-		temp = nullptr;
-		m_size-=1;
+		if(!empty()) {
+			auto temp = m_last;
+			if(size()>1){
+				m_last->m_prev->m_next = nullptr;
+				m_last = m_last->m_prev;
+			}
+			else {
+				m_last->m_prev=nullptr;
+			}
+			delete temp;
+			temp = nullptr;
+			m_size-=1;
+		}
+		else std::cout<<"List is empty!"<<std::endl;
+	}
+
+	void clear() {
+		while(!empty())
+		{
+			pop_back();
+		}
 	}
 
 private:

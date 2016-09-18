@@ -44,6 +44,17 @@ list.pop_back();
 REQUIRE(42==list.back());
 }
 
+TEST_CASE("should be empty after clearing ", "[modifiers]")
+{
+	List<int> list;
+	list.push_front(1);
+	list.push_front(2);
+	list.push_front(3);
+	list.push_front(4);
+	list.clear();
+	REQUIRE(list.empty());
+}
+
 int main(int argc, char* argv[])
 {
 	return Catch::Session().run(argc, argv);
