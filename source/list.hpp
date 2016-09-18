@@ -62,7 +62,7 @@ struct ListIterator
 	}
 
 	// ?
-	Self operator++(int n) {
+	Self& operator+(int n) {
 		for (int i = 0; i < n; ++i)
 		{
 			if (m_node->m_next==nullptr)
@@ -71,7 +71,7 @@ struct ListIterator
 			}
 			m_node = m_node->m_next;
 		}
-		return this;
+		return *this;
 	}
 
 	bool operator==(const Self& x) const {
@@ -125,6 +125,18 @@ public:
 			push_back(*it);
 		}
 	}
+
+	//move c-tor
+	List(List&& m):
+	m_first(m.m_first),
+	m_last(m.m_last),
+	m_size(m.m_size)
+	{
+		m.m_first=nullptr;
+		m.m_last=nullptr;
+		m.m_size=0;
+	}
+
 
 	bool empty() const {
 		if (size()==0)
@@ -224,6 +236,57 @@ public:
 		ListIterator<T> e{m_last};
 		return e.next();
 	}
+
+	//insert funktioniert nicht
+
+	// void insert(ListIterator<T> pos, T const& node) {
+	// 	ListNode<T>* n = new ListNode<T>{node, pos.m_node->m_prev, pos.m_node->m_next};
+		
+	// 	if(pos==begin()) {
+	// 		m_first=n;
+	// 		pos.m_node->m_next->m_prev= n;
+	// 		std::cout<<"if"<<std::endl;
+	// 	}
+	// 	else if (pos==end()) {
+	// 		pos.m_node->m_prev->m_next= n;
+	// 		m_last=n;
+	// 		std::cout<<"else if"<<std::endl;
+	// 	}
+	// 	else {
+	// 		pos.m_node->m_prev->m_next= n;
+	// 		pos.m_node->m_next->m_prev= n;
+	// 		std::cout<<"else"<<std::endl;
+	// 	}
+	// 	m_size+=1;
+	// 	std::cout<<"ende"<<std::endl;
+	// }
+
+
+	// void reverse() {
+	// 	auto it=begin()+1;
+	// 	while(it!=end()) {
+	// 		//std::cout<<1<<std::endl;
+	// 		auto node = it.m_node->m_prev;
+	// 		auto temp = node->m_prev;
+	// 		//std::cout<<2<<std::endl;
+	// 		node->m_prev = node->m_next;
+	// 		node->m_next = temp;
+	// 		//std::cout<<3<<std::endl;
+	// 		++it;
+	// 	}
+	// 	//std::cout<<4<<std::endl;
+	// 	auto temp = it.m_node->m_prev;
+	// 	//std::cout<<4.5<<std::endl;
+	// 	it.m_node->m_prev = it.m_node->m_next;
+	// 	//std::cout<<5<<std::endl;
+	// 	it.m_node->m_next = temp;
+
+	// 	auto temp1=m_first;
+	// 	//std::cout<<6<<std::endl;
+	// 	m_first=m_last;
+	// 	m_last=temp1;
+	// 	//std::cout<<7<<std::endl;
+	// }
 
 private:
 	//Warum sind sie initialisiert? 

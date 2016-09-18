@@ -3,8 +3,8 @@
 
 #include "list.hpp"
 
-#include <list>
-
+#include <vector>
+#include <algorithm>
 
 TEST_CASE ("describe_list", "[aufgabe1]")
 {
@@ -123,6 +123,67 @@ TEST_CASE ( " copy constructor " , " [ constructor ] " )
 	List<int> list2{list};
 	REQUIRE(list == list2);
 }
+
+// TEST_CASE("insert", "[insert]")
+// {
+// 	List<int> l1;
+// 	l1.push_back(1);
+// 	l1.push_back(2);
+// 	l1.push_back(3);
+// 	l1.push_back(4);
+// 	l1.insert(l1.end(), 10);
+// 	std::cout<<l1.size()<<std::endl;
+
+// 	REQUIRE(l1.size()==5);
+// }
+
+// TEST_CASE("reverse", "[reverse]")
+// {
+// 	List<int> list;
+// 	list.push_front(1);
+// 	list.push_front(2);
+// 	list.push_front(3);
+// 	list.push_front(4);
+// 	// for(auto i=list.begin(); i!=list.end(); ++i) {
+// 	// 	std::cout<<*i<<std::endl;
+// 	// }
+// 	list.reverse();
+// 	// for(auto i=list.begin(); i!=list.end(); ++i) {
+// 	// 	std::cout<<*i<<std::endl;
+// 	// }
+// }
+
+
+TEST_CASE ( " move constructor " , " [ constructor ] " )
+{
+	List <int> list;
+	list.push_front(1);
+	list.push_front(2);
+	list.push_front(3);
+	list.push_front(4);
+	List<int> list2(std::move(list));
+	REQUIRE (0 == list.size());
+	REQUIRE (list.empty());
+	REQUIRE (4 == list2.size());
+}
+
+// TEST_CASE("copy in vector", "[vector]")
+// {
+// 	std::vector<int> v;
+// 	List <int> list;
+// 	list.push_front(1);
+// 	list.push_front(2);
+// 	list.push_front(3);
+// 	list.push_front(4);
+// 	std::cout<<"here"<<std::endl;
+// 	std::copy(list.begin(), list.end(), v.begin());
+// 	std::cout<<"there"<<std::endl;
+// 	for(auto i=v.begin(); i!=v.end(); ++i) {
+// 		std::cout<<*i<<std::endl;
+// 	}
+// 	REQUIRE(v.size()==4);
+// }
+
 
 int main(int argc, char* argv[])
 {
